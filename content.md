@@ -74,8 +74,6 @@ Standard für fast alle mathematischen Anwendungen Pakete der **American Mathema
 Weitere Empfehlungen:
 * `mathtools`: Erweiterung von amsmath (Layout-Tricks)
 * `siunitx`: Für physikalische Einheiten (Wichtig für Nicht-Mathematiker!)
-
-### Referenzen (Links):
 * [Short Math Guide (CTAN)](https://tug.ctan.org/info/short-math-guide/short-math-guide.pdf)
 * [AMS Styleguide (Kap. 13)](https://www.ams.org/arc/styleguide/index.html)
 

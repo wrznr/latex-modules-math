@@ -7,20 +7,44 @@
     <link href="https://fonts.googleapis.com/css?family=Bitter|Open+Sans" rel="stylesheet">
   </head>
   <body>
+    <script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    tags: 'ams' // Aktiviert Nummerierung
+  },
+  options: {
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  },
+  startup: {
+    ready: () => {
+      MathJax.startup.defaultReady();
+      // Sicherstellen, dass MathJax nach jedem Folienwechsel neu rendert
+      MathJax.startup.promise.then(() => {
+        console.log('MathJax initial typesetting complete');
+      });
+    }
+  }
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script" async></script>
     <script src="https://remarkjs.com/downloads/remark-0.14.0.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
     <script type="text/javascript">
       var slideshow = remark.create({
         sourceUrl: 'content.md',
         countIncrementalSlides: false
       });
-      // Setup MathJax
-      MathJax.Hub.Config({
-          tex2jax: {
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-          }
+
+      // WICHTIG: Event-Listener, damit MathJax bei Folienwechsel rendert
+      slideshow.on('afterShowSlide', function (slide) {
+      // Nur rendern, wenn MathJax bereit ist
+      if (window.MathJax && window.MathJax.typesetPromise) {
+        window.MathJax.typesetPromise();
+      }
       });
-      MathJax.Hub.Configured();
     </script>
   </body>
 </html>
