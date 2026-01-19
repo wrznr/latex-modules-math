@@ -61,8 +61,6 @@ count: false
 
 ---
 
----
-
 # Der Standard: AMS-Pakete
 
 Standard für fast alle mathematischen Anwendungen Pakete der **American Mathematical Society (AMS)**
@@ -80,6 +78,32 @@ Weitere Empfehlungen:
 ### Referenzen (Links):
 * [Short Math Guide (CTAN)](https://tug.ctan.org/info/short-math-guide/short-math-guide.pdf)
 * [AMS Styleguide (Kap. 13)](https://www.ams.org/arc/styleguide/index.html)
+
+---
+
+class: part-slide
+count: false
+
+# 2. Inline vs. Display Math
+
+---
+
+# Zwei Modi der Darstellung
+
+**1. Inline Math (im Fließtext)**
+* Eingebettet in den Text.
+* Symbole sind oft kleiner, Indizes rücken seitlich heran.
+* Eingabe mit `$ ... $` oder `\( ... \)`.
+
+**2. Display Math (Abgesetzt)**
+* Steht in einer eigenen Zeile, zentriert.
+* Symbole (Summen, Integrale) entfalten volle Größe.
+* Eingabe mit `\[ ... \]` oder Umgebungen wie `equation`.
+
+### Beispiel:
+* Inline: $\sum_{i=1}^n i$ sieht kompakt aus.
+* Display:
+    $$\sum_{i=1}^n i$$
 
 ---
 
