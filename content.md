@@ -148,6 +148,145 @@ Der Standard für mehrzeilige Herleitungen. Ausrichtung am `&` Zeichen.
 
 ---
 
+# Lange Gleichungen: `multline`
+
+Formel zu lang für eine Zeile, aber ohne logische Ausrichtung am Gleichheitszeichen
+
+```latex
+\begin{multline}
+  p(x) = 3x^6 + 14x^5 + 590x^4 + 19x^3 \\ 
+         - 12x^2 - 39x + 22
+\end{multline}
+```
+
+* erste Zeile: linksbündig
+* letzte Zeile: rechtsbündig
+* mittlere Zeilen: zentriert
+
+---
+
+class: part-slide
+count: false
+
+# 4. Grundlegende Elemente
+
+---
+
+**Brüche:**
+```latex
+\frac{Zähler}{Nenner}  % Normal
+\dfrac{...}{...}       % Erzwingt Display-Größe
+\tfrac{...}{...}       % Erzwingt Text-Größe
+```
+
+**Matrizen:** (benötigt `amsmath`)
+```latex
+\begin{pmatrix} a & b \\ c & d \end{pmatrix}  % Runde Klammern
+\begin{bmatrix} a & b \\ c & d \end{bmatrix}  % Eckige Klammern
+```
+* Spaltentrenner: `&`
+* Zeilenumbruch: `\\`
+
+---
+
+# Indizes, Exponenten & Griechisch
+
+* **Subskript (Index):** `x_{12}` (`{}` bei mehr als einem Zeichen!)
+* **Superskript (Exponent):** `x^{2}`
+* **Griechisch:** * Klein: `\alpha`, `\beta`, `\gamma`, `\pi`
+    * Groß: `\Gamma`, `\Pi`, `\Omega`
+
+**Wichtig:** Griechische Buchstaben funktionieren nur im Mathe-Modus (`$ \alpha $`).
+
+---
+
+class: part-slide
+count: false
+
+# 5. Spezialfälle
+
+---
+
+# Einheiten mit `siunitx`
+
+```latex
+\usepackage{siunitx}
+...
+Die Geschwindigkeit beträgt \qty{120}{\kilo\metre\per\hour}.
+Eine Länge von \qty{5e-9}{\meter}.
+```
+
+* Korrektes Spacing zwischen Zahl und Einheit.
+* Einheitliche Typografie (aufrechtes "m" für Meter, kursives Variablen-$m$).
+
+---
+
+# Theoreme & Sätze (Enunciations)
+
+**In der Präambel:**
+```latex
+\usepackage{amsthm}
+\newtheorem{satz}{Satz}
+\newtheorem{lemma}[satz]{Lemma}
+```
+
+**Im Dokument:**
+```latex
+\begin{satz}[Pythagoras]
+  Im rechtwinkligen Dreieck gilt $a^2 + b^2 = c^2$.
+\end{satz}
+
+\begin{proof}
+  Beweis hier... \qed
+\end{proof}
+```
+
+---
+
+class: part-slide
+count: false
+
+# 6. Interaktiver Teil
+
+---
+
+# Aufgabe 1: Einfache Formel
+
+Setzen Sie folgende Formel in LaTeX (nutzen Sie `equation`):
+
+$$f(x) = \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}$$
+
+**Tipps:**
+* Paket `amsmath` notwendig?
+* Befehle: `\frac`, `\sqrt`, `\pi`, `e^...`, `\left( ... \right)`
+
+---
+
+# Aufgabe 2: Ausrichtung
+
+Setzen Sie folgende Herleitung mit `align*` (ohne Nummern):
+
+$$
+\begin{aligned}
+(a+b)^2 &= (a+b)(a+b) \\
+        &= a^2 + ab + ba + b^2 \\
+        &= a^2 + 2ab + b^2
+\end{aligned}
+$$
+
+**Achten Sie auf:**
+* Wo muss das `&` stehen?
+* Wie erzwingt man den Zeilenumbruch?
+
+---
+
+# Aufgabe 3: Matrizen & Einheiten
+
+1.  Erstellen Sie eine 2x2 Matrix $A$ mit den Werten 1, 0 und 0, 1 (Einheitsmatrix).
+2.  Schreiben Sie einen Satz mit `siunitx`: "Die Erdbeschleunigung beträgt ca. 9,81 m/s²."
+
+---
+
 class: part-slide
 
 # Many thanks for your attention!
