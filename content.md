@@ -98,7 +98,10 @@ count: false
 * Symbole (Summen, Integrale) entfalten volle Größe.
 * Eingabe mit `\[ ... \]` oder Umgebungen wie `equation`.
 
-### Beispiel:
+---
+
+# Beispiel
+
 * Inline: $\sum_{i=1}^n i$ sieht kompakt aus.
 * Display:
     $$\sum_{i=1}^n i$$
