@@ -237,7 +237,7 @@ Eine Länge von \qty{5e-9}{\meter}.
 \end{satz}
 
 \begin{proof}
-  Beweis hier... \qed
+  Beweis hier...
 \end{proof}
 ```
 
