@@ -267,11 +267,11 @@ $$f(x) = \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\r
 Setzen Sie folgende Herleitung mit `align*` (ohne Nummern):
 
 $$
-\begin{aligned}
+\begin{align*}
 (a+b)^2 &= (a+b)(a+b) \\
         &= a^2 + ab + ba + b^2 \\
         &= a^2 + 2ab + b^2
-\end{aligned}
+\end{align*}
 $$
 
 **Achten Sie auf:**
@@ -283,7 +283,7 @@ $$
 # Aufgabe 3: Matrizen & Einheiten
 
 1.  Erstellen Sie eine 2x2 Matrix $A$ mit den Werten 1, 0 und 0, 1 (Einheitsmatrix).
-2.  Schreiben Sie einen Satz mit `siunitx`: "Die Erdbeschleunigung beträgt ca. 9,81 m/s²."
+2.  Schreiben Sie einen Satz mit `siunitx`: „Die Erdbeschleunigung beträgt ca. 9,81 m/s².“
 
 ---
 
