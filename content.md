@@ -109,6 +109,46 @@ count: false
 ---
 
 class: part-slide
+count: false
+
+# 3. Zentrale Umgebungen
+
+---
+
+# Einzelne Gleichungen: `equation`
+
+Für einzelne, nummerierte Gleichungen:
+
+```latex
+\begin{equation}
+  E = mc^2 \label{eq:einstein}
+\end{equation}
+```
+
+* Referenzierung im Text mit `\eqref{eq:einstein}`
+* **ohne** Nummerierung: `\begin{equation*} ... \end{equation*}` (benötigt `amsmath`)
+
+---
+
+# Mehrzeilig & Ausgerichtet: `align`
+
+Der Standard für mehrzeilige Herleitungen. Ausrichtung am `&` Zeichen.
+
+```latex
+\begin{align}
+  f(x) &= (x+a)(x+b) \\
+       &= x^2 + xb + ax + ab \\
+       &= x^2 + x(a+b) + ab
+\end{align}
+```
+
+* `&`: Ausrichtungsmarker (üblicherweise vor dem Gleichheitszeichen)
+* `\\`: Zeilenumbruch
+* für jede Zeile eine Nummer (unterdrücken mit `\nonumber` oder `align*`)
+
+---
+
+class: part-slide
 
 # Many thanks for your attention!
 
