@@ -267,11 +267,11 @@ $$f(x) = \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\r
 Setzen Sie folgende Herleitung mit `align*` (ohne Nummern):
 
 $$
-\begin{align*}
-(a+b)^2 &= (a+b)(a+b) \\
-        &= a^2 + ab + ba + b^2 \\
+\begin{aligned}
+(a+b)^2 &= (a+b)(a+b) \\\\
+        &= a^2 + ab + ba + b^2 \\\\
         &= a^2 + 2ab + b^2
-\end{align*}
+\end{aligned}
 $$
 
 **Achten Sie auf:**
