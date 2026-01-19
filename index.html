@@ -16,7 +16,8 @@ window.MathJax = {
     tags: 'ams' // Aktiviert Nummerierung
   },
   options: {
-    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    ignoreHtmlClass: 'tex2jax_ignore|remark-code|remark-inline-code'	      
   },
   startup: {
     ready: () => {
