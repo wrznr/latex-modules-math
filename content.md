@@ -6,11 +6,11 @@ layout: true
   <table>
     <tr>
       <td style="text-align:right">Sächsische Landesbibliothek – Staats- und Universitätsbibliothek</td>
-      <td>Date</td>
+      <td>19. Januar 2026</td>
       <td style="text-align:right"><a href="https://www.slub-dresden.de/">www.slub-dresden.de</a></td>
     </tr>
     <tr>
-      <td style="text-align:right">Referat 2.5</td>
+      <td style="text-align:right">Referat 4.3</td>
       <td />
     </tr>
   </table>
@@ -22,13 +22,13 @@ layout: true
       <td style="text-align:left"><b>Kay-Michael Würzner</b></td>
     </tr>
     <tr>
-      <td style="text-align:left">Referat 2.5</td>
+      <td style="text-align:left">Referat 4.3</td>
     </tr>
     <tr>
-      <td style="font-size:8pt"><b>Date</b></td>
+      <td style="font-size:8pt"><b>19. Januar 2026</b></td>
     </tr>
     <tr>
-      <td style="font-size:8pt">Event</td>
+      <td style="font-size:8pt">LaTeX-Modul: Formeln</td>
     </tr>
   </table>
 </div>
@@ -38,23 +38,48 @@ layout: true
 class: title-slide
 count: false
 
-# Title
-## Subtitle
+# Mathematische Formeln in LaTeX
+## Grundlagen, Umgebungen und Typografie
 
 ---
 
-# Overview
+# Agenda
 
-- Section 1
-  + Subsection 1
-- Section 2
+1. Wichtige Pakete & Ressourcen
+2. Inline vs. Display Math
+3. Zentrale Umgebungen (`equation`, `align`, `multline`)
+4. Grundlegende Elemente (Brüche, Matrizen, Symbole)
+5. Spezialfälle: Einheiten & Theoreme
+6. **Interaktiver Teil & Übungen**
 
 ---
 
 class: part-slide
 count: false
 
-# Topic 1
+# 1. Wichtige Pakete & Ressourcen
+
+---
+
+---
+
+# Der Standard: AMS-Pakete
+
+Standard für fast alle mathematischen Anwendungen Pakete der **American Mathematical Society (AMS)**
+
+```latex
+\usepackage{amsmath}  % Umgebungen für Formeln
+\usepackage{amssymb}  % Zusätzliche Symbole
+\usepackage{amsthm}   % Umgebungen für Sätze/Theoreme
+```
+
+Weitere Empfehlungen:
+* `mathtools`: Erweiterung von amsmath (Layout-Tricks)
+* `siunitx`: Für physikalische Einheiten (Wichtig für Nicht-Mathematiker!)
+
+### Referenzen (Links):
+* [Short Math Guide (CTAN)](https://tug.ctan.org/info/short-math-guide/short-math-guide.pdf)
+* [AMS Styleguide (Kap. 13)](https://www.ams.org/arc/styleguide/index.html)
 
 ---
 
@@ -63,5 +88,5 @@ class: part-slide
 # Many thanks for your attention!
 
 <center>
-<a href="https://wrznr.github.io/slide-template/">wrznr.github.io/slide-template</a>
+<a href="https://wrznr.github.io/slide-template/">wrznr.github.io/latex-module-math</a>
 </center>
